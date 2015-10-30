@@ -1,0 +1,57 @@
+shell
+perché usare un terminale nel 2015?
+	Saper usare il terminale fa tanto l33t h4x0r
+	È la maniera più comoda per gestire una macchina da remoto
+	Quando le cose si rompono un terminale è sempre disponibile
+	esempi di utilizzo fighi della shell/bash
+		cat ~/.zsh_history | cut -f 2 -d ";" | cut -f 1 -d " " | sort | uniq -c | sort -nr | less
+
+bash foundamentals
+	Cheatsheet:
+		Filesystem:
+			**ls**
+			**cd** cambiare cartella<br>
+			**mkdir** creare cartella<br>
+			**rm** cancellare file/cartelle<br>
+			**chmod**
+			**chown**
+			**chgrp**
+			**cp/mv**
+		Visualizzare/modificare file:
+			**cat**
+			**echo**
+			**tee**
+				echo "20" | sudo tee /sys/devices/system/cpu/intel_pstate/max_perf_pct
+			**nano/vim/emacs**
+			**less/head/tail**
+			**grep**
+		Altri:
+			**./file**
+			**curl/wget**
+			**file**
+			**CTRL-Z/bg/fg/jobs/&**
+			**find/locate/updatedb**
+			**sudo**
+			**apt-get install/update/upgrade/remove/purge**
+			**apt-cache search**
+
+	Esecuzione condizionale
+		&&
+		||
+
+	tl;dr cheatsheet
+	TAB. TAB is your friend
+		Freccia su
+		CTRL-R
+
+How to solve problems, aka RTFM
+	man
+	apropos
+	info
+	which/where/whereis/whatis
+	cmd -h
+	cmd --help
+
+
+Domande
+Grazie per l'attenzione, licenza
