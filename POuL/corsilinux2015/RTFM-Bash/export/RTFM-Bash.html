@@ -174,11 +174,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="text-align-center text-size-biggest">
+ <div class="text-align-center text-size-biggest">
     <h1>RTFM Bash</h1>
     <h3>Corsi Linux 2015</h3>
 </div>
-
+<br><br><br>
 <div class="text-align-center">
 <div class="poul-logo width-auto display-inline-block">
     <a class href="https://www.poul.org">
@@ -204,7 +204,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-bash"><pre><span class="nb">printf</span> <span class="s1">&#39;Ciao!\n\nBenvenuti alla lezione su bash!&#39;</span> <span class="p">|</span> cowsay
@@ -243,8 +243,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Potete trovare queste slide a questo indirizzo
-<br><a href="https://github.com/fcremo/slides/tree/master/POuL/corsilinux2015/RTFM-Bash">https://github.com/fcremo/slides</a></p>
+<p>Potete trovare queste slide all'indirizzo <a href="https://github.com/fcremo/slides/tree/master/POuL/corsilinux2015/RTFM-Bash">github.com/fcremo/slides</a></p>
 
 </div>
 </div>
@@ -255,9 +254,9 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Perch&#233;-usare-un-terminale-al-giorno-d'oggi?">Perch&#233; usare un terminale al giorno d'oggi?<a class="anchor-link" href="#Perch&#233;-usare-un-terminale-al-giorno-d'oggi?">&#182;</a></h1><ul>
-<li>Svolgere compiti ripetitivi in fretta</li>
+<li>Svolgere velocemente compiti ripetitivi</li>
 <li>Amministrare e configurare un sistema </li>
-<li>Gestire un computer remoto</li>
+<li>Gestire un computer da remoto</li>
 <li>Quando le cose si rompono un terminale è sempre disponibile</li>
 </ul>
 
@@ -281,7 +280,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="hacking_in_progress.gif" alt="Hacking in progress" class="fullwidth fullheight"></p>
+<h1 id="In-breve:-per-controllare-i-nostri-computer">In breve: per controllare i nostri computer<a class="anchor-link" href="#In-breve:-per-controllare-i-nostri-computer">&#182;</a></h1><p><img src="hacking_in_progress.gif" alt="Hacking in progress" class="fullwidth fullheight"></p>
 
 </div>
 </div>
@@ -309,7 +308,7 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-bash"><pre>cat ~/.bash_history <span class="p">|</span> cut -f <span class="m">2</span> -d <span class="s2">&quot;;&quot;</span> <span class="p">|</span> cut -f <span class="m">1</span> -d <span class="s2">&quot; &quot;</span> <span class="se">\</span>
@@ -326,11 +325,11 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>    109 echo
-     79 cd
-     55 ls
-     37 cat
-     29 cowsay
+<pre>    788 sudo
+    435 ls
+    419 cd
+    232 man
+    209 ssh
 </pre>
 </div>
 </div>
@@ -354,7 +353,7 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="BASH-101:-Read-The-Freaking-Manual">BASH 101: Read The Freaking Manual<a class="anchor-link" href="#BASH-101:-Read-The-Freaking-Manual">&#182;</a></h1><p>Ogni comando ha diverse opzioni, documentate nella manpage relativa.</p>
+<h1 id="Using-BASH,-AKA-Reading-The-Freaking-Manual">Using BASH, AKA Reading The Freaking Manual<a class="anchor-link" href="#Using-BASH,-AKA-Reading-The-Freaking-Manual">&#182;</a></h1><p>Ogni comando ha diverse opzioni, documentate nella relativa manpage.</p>
 <table>
 <thead><tr>
 <th>Comando</th>
@@ -367,7 +366,7 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 <td>cercare comandi rilevanti a <code>what</code></td>
 </tr>
 <tr>
-<td><strong><code><span class="nowrap">man &lt;nomecomando&gt;</span></code></strong></td>
+<td><strong><code><span class="nowrap">man &lt;command&gt;</span></code></strong></td>
 <td>consultare la documentazione</td>
 </tr>
 <tr>
@@ -375,12 +374,51 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 <td>consultare la documentazione di man</td>
 </tr>
 <tr>
-<td><code>comando -h/--help</code></td>
+<td><code><nobr>command -h/--help</nobr></code></td>
 <td>stampare l'help di un comando (non sempre disponibile)</td>
 </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Tips-and-tricks">Tips and tricks<a class="anchor-link" href="#Tips-and-tricks">&#182;</a></h1><p>Conviene conoscere alcuni trucchi fin da subito</p>
+<table>
+<thead><tr>
+<th>Comando</th>
+<th>Funzione</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>TAB</td>
 <td>autocompletamento (non sempre disponibile)</td>
+</tr>
+<tr>
+<td>Freccia Su</td>
+<td>modifica di un comando precedente</td>
+</tr>
+<tr>
+<td>CTRL+R</td>
+<td>ricerca di un comando precedente</td>
+</tr>
+<tr>
+<td>CTRL+C</td>
+<td>interrompere un comando</td>
+</tr>
+<tr>
+<td>CTRL+SHIFT+C</td>
+<td>copiare la selezione</td>
+</tr>
+<tr>
+<td>CTRL+SHIFT+V</td>
+<td>incollare dagli appunti</td>
 </tr>
 </tbody>
 </table>
@@ -409,31 +447,66 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 <td>elencare i file nella cartella corrente</td>
 </tr>
 <tr>
-<td><code>cd &lt;[nomedir,..]&gt;</code></td>
-<td>entrare nella cartella nomedir/risalire di una cartella</td>
+<td><code>cd &lt;dirname&gt;</code></td>
+<td>entrare nella cartella <code>dirname</code></td>
 </tr>
 <tr>
-<td><code>mkdir &lt;nomedir&gt;</code></td>
-<td>creare la cartella &lt;nomedir&gt;</td>
+<td><code>cd ..</code></td>
+<td>risalire di una cartella</td>
 </tr>
 <tr>
-<td><code>rm &lt;nomefile&gt;</code></td>
-<td>cancellare il file <code>nomefile</code></td>
+<td><code>mkdir &lt;dirname&gt;</code></td>
+<td>creare la cartella <code>dirname</code></td>
 </tr>
 <tr>
-<td><code>rm -r &lt;nomedir&gt;</code></td>
-<td>cancellare la cartella <code>nomedir</code></td>
+<td><code>rm &lt;filename&gt;</code></td>
+<td>cancellare il file <code>filename</code></td>
 </tr>
 <tr>
-<td><code>chmod</code></td>
-<td>cambiare permessi a file e cartelle</td>
-</tr>
-<tr>
-<td><code>chown/chgrp</code></td>
-<td>cambiare proprietari a file e cartelle</td>
+<td><code>rm -r &lt;dirname&gt;</code></td>
+<td>cancellare la cartella <code>dirname</code></td>
 </tr>
 </tbody>
 </table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Operare-su-file-e-cartelle-(2)">Operare su file e cartelle (2)<a class="anchor-link" href="#Operare-su-file-e-cartelle-(2)">&#182;</a></h1><table>
+<thead><tr>
+<th>Comando</th>
+<th>Funzione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cp &lt;what&gt; &lt;where&gt;</code></td>
+<td>copiare <code>what</code> in <code>where</code></td>
+</tr>
+<tr>
+<td><code>mv &lt;what&gt; &lt;where&gt;</code></td>
+<td>spostare <code>what</code> in <code>where</code></td>
+</tr>
+<tr>
+<td><code>chmod &lt;mode&gt; &lt;filename&gt;</code></td>
+<td>cambiare permessi a file e cartelle</td>
+</tr>
+<tr>
+<td><code>chown &lt;user&gt; &lt;filename&gt;</code></td>
+<td>cambiare proprietaro di <code>filename</code></td>
+</tr>
+<tr>
+<td><code>chgrp &lt;user&gt; &lt;filename&gt;</code></td>
+<td>cambiare proprietaro di <code>filename</code></td>
+</tr>
+</tbody>
+</table>
+<p>es: <code>chmod +x &lt;filename&gt;</code> imposta <code>filename</code> come eseguibile</p>
 
 </div>
 </div>
@@ -451,28 +524,32 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 </thead>
 <tbody>
 <tr>
-<td><code>cat &lt;nomefile&gt;</code></td>
-<td>stampare il file nomefile su STDOUT (a schermo)</td>
+<td><code>cat &lt;filename&gt;</code></td>
+<td>stampare il file filename su STDOUT (a schermo)</td>
 </tr>
 <tr>
-<td><code>echo "qualcosa"</code></td>
-<td>stampare <code>qualcosa</code> su STDOUT</td>
+<td><code>echo "something"</code></td>
+<td>stampare <code>something</code> su STDOUT</td>
 </tr>
 <tr>
-<td><code>nano/vim/emacs</code> <nomefile></td>
-<td>editare il file <code>nomefile</code></td>
+<td><code>nano/vim/emacs</code> <filename></td>
+<td>editare il file <code>filename</code></td>
 </tr>
 <tr>
-<td><code>less &lt;nomefile&gt;</code></td>
-<td>visualizzare il file <code>nomefile</code></td>
+<td><code>less &lt;filename&gt;</code></td>
+<td>visualizzare il file <code>filename</code></td>
 </tr>
 <tr>
-<td><code>head/tail &lt;nomefile&gt;</code></td>
-<td>visualizzare l'inizio/la fine del file <code>nomefile</code></td>
+<td><code>head -5 &lt;filename&gt;</code></td>
+<td>visualizzare le prime 5 righe del file <code>filename</code></td>
 </tr>
 <tr>
-<td><code>tee &lt;nomefile&gt;</code></td>
-<td>stampare STDIN su STDOUT e in <code>nomefile</code></td>
+<td><code>tail -5 &lt;filename&gt;</code></td>
+<td>visualizzare le ultime 5 righe del file <code>filename</code></td>
+</tr>
+<tr>
+<td><code>tee &lt;filename&gt;</code></td>
+<td>stampare STDIN su STDOUT e in <code>filename</code></td>
 </tr>
 </tbody>
 </table>
@@ -493,16 +570,16 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 </thead>
 <tbody>
 <tr>
-<td><code>grep &lt;espressione&gt; &lt;nomefile&gt;</code></td>
-<td>cercare <code>espressione</code> nel file <code>nomefile</code></td>
+<td><code><nobr>grep &lt;expr&gt; &lt;filename&gt;</nobr></code></td>
+<td>cercare <code>expr</code> nel file <code>filename</code></td>
 </tr>
 <tr>
-<td><code>find -name "*parola*"</code></td>
-<td>cercare nella cartella corrente (ricorsivamente) i file che contengono "parola" nel nome</td>
+<td><code>find -name "*keyword*"</code></td>
+<td>cercare ricorsivamente nella cartella corrente i file che contengono "keyword" nel nome</td>
 </tr>
 <tr>
-<td><code>locate "parola"</code></td>
-<td>cercare i file che contengono "parola" nel nome in tutto il sistema</td>
+<td><code>locate "keyword"</code></td>
+<td>cercare in tutto il filesystem i file che contengono "keyword" nel nome</td>
 </tr>
 <tr>
 <td><code>sudo updatedb</code></td>
@@ -527,20 +604,24 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 </thead>
 <tbody>
 <tr>
-<td><code>./nomefile</code></td>
-<td>eseguire <code>nomefile</code> situato nella cartella corrente</td>
+<td><code>./filename</code></td>
+<td>eseguire <code>filename</code> situato nella cartella corrente</td>
 </tr>
 <tr>
-<td><code><span class="nowrap">wget "<a href="https://poul.org">https://poul.org</a>"</span></code></td>
-<td>scaricare un file dal web (l'homepage del POuL)</td>
+<td><code>file &lt;filename&gt;</code></td>
+<td>visualizzare il tipo di file di <code>filename</code></td>
 </tr>
 <tr>
-<td><code>file &amp;lt;nomefile&amp;gt;</code></td>
-<td>visualizzare il tipo di file di <code>nomefile</code></td>
+<td><code>sudo &lt;command&gt;</code></td>
+<td>eseguire <code>command</code> come root</td>
 </tr>
 <tr>
-<td><code>sudo cmd</code></td>
-<td>eseguire il comando <code>cmd</code> come amministratore (root)</td>
+<td><code><span class="nowrap">wget "<a href="https://www.poul.org">https://www.poul.org</a>"</span></code></td>
+<td>scaricare un file (l'homepage del POuL)</td>
+</tr>
+<tr>
+<td><code>youtube-dl &lt;url&gt;</code></td>
+<td>download di video da YT e altri siti</td>
 </tr>
 </tbody>
 </table>
@@ -564,7 +645,7 @@ cercando <code>Terminal</code> o <code>xterm</code> tra i software installati.</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-bash"><pre><span class="nb">echo</span> <span class="s2">&quot;something&quot;</span> &gt; file_di_destinazione<span class="p">;</span>
@@ -592,7 +673,7 @@ cat file_di_destinazione<span class="p">;</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-bash"><pre><span class="nb">echo</span> <span class="s2">&quot;another thing&quot;</span> &gt;&gt; file_di_destinazione<span class="p">;</span>
@@ -621,7 +702,7 @@ another thing
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-bash"><pre>cat - &lt;file_di_destinazione
@@ -654,8 +735,8 @@ another thing
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Pipe">Pipe<a class="anchor-link" href="#Pipe">&#182;</a></h1><ul>
 <li><p>Con <code>|</code> si collega STDOUT di un comando allo STDIN di un altro comando</p>
-<p>Es: <code>echo "20" | sudo tee /sys/devices/system/cpu/intel_pstate/max_perf_pct</code></p>
-<p>Scrive 20 dentro al file, utilizzando l'utente root</p>
+<p><code>echo "20" | sudo tee /sys/devices/system/cpu/intel_pstate/max_perf_pct</code></p>
+<p>Scrive 20 dentro al file che controlla la performance massima del processore, utilizzando l'utente root</p>
 </li>
 </ul>
 
@@ -664,11 +745,11 @@ another thing
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-bash"><pre><span class="nb">echo</span> <span class="s2">&quot;20&quot;</span> <span class="p">|</span> tee altro_file<span class="p">;</span>
-cat altro_file
+cat altro_file<span class="p">;</span>
 </pre></div>
 
 </div>
@@ -715,10 +796,10 @@ cat altro_file
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Jobs">Jobs<a class="anchor-link" href="#Jobs">&#182;</a></h1><ul>
 <li>Per eseguire in background un comando basta apporre <code>&amp;</code> alla fine<ul>
-<li>es: <code>wget "https://www.poul.org" &amp;</code> 
-<br>Scarica l'homepage del POuL in background</li>
+<li>es: <code>wget -r "https://www.poul.org" &amp;</code> 
+<br>Scarica l'intero sito del POuL in background</li>
 <li>stdout ed stderr del processo rimangono collegati al terminale
-  <br>Per non mostrarli utilizzare <code>disown &lt;job n°&gt;</code></li>
+  <br>Per scollegarli utilizzare <code>disown %&lt;job n°&gt;</code></li>
 </ul>
 </li>
 </ul>
@@ -774,7 +855,7 @@ cat altro_file
 <h1>Domande?</h1>
 </div>
 <div class="end-footer text-align-center">
-    <img src="by-sa.svg" alt="Creative Commons 3.0 Attribution-ShareAlike" class="inline"><br><span class="text-size-smaller">[Slide distribuite con licenza Creative Commons 3.0 Attribution-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/3.0/)</span>
+    <img src="by-sa.svg" alt="Creative Commons 3.0 Attribution-ShareAlike" class="inline"><br><span class="text-size-smaller">[Slide distribuite con licenza Creative Commons 3.0 Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/)</span>
 </div>
 </div>
 </div>
